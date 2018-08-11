@@ -3,6 +3,8 @@ stage('SCM Checkout'){
 git 'https://github.com/dbhainsal15/myweb'
 }
 stage ('Compile-Pcakage'){
-sh 'mvn package'
+   //Get maven home path
+   def mvnHome = tool name: 'maven3', type: 'maven'
+   sh "${mvnHome}/mvn package"
 }
 }
