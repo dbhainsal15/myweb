@@ -5,6 +5,6 @@ git 'https://github.com/dbhainsal15/myweb'
 stage ('Compile-Pcakage'){
    //Get maven home path
    def mvnHome = tool name: 'maven3', type: 'maven'
-   sh "${mvnHome}/mvn package"
+   sh "${mvnHome}/bin/mvn package"
 }
 }
