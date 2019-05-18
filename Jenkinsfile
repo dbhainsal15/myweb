@@ -1,6 +1,6 @@
 node{
     stage('SCM Checkout'){
-      git changelog: false, poll: false, url: 'https://github.com/javahometech/myweb'   
+      git changelog: false, poll: false, url: 'https://github.com/dbhainsal15/myweb'   
     }
   
     stage('Test'){
