@@ -10,12 +10,5 @@ node{
          def mvnHome = tool name: 'maven', type: 'maven'
          sh "${mvnHome}/bin/mvn package"
     }
-    stage('Deploy To Tomcat'){
-        sh '/home/ec2-user/scripts/sftp_tomcat.sh'
-    }
-    stage('Email'){
-        mail bcc: '', body: '''Thanks
-Java Home''', cc: '', from: '', replyTo: '', subject: 'MyWeb Deployed', to: 'hari.kammana@gmail.com'
-    }
     
 }
