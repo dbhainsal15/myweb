@@ -2,7 +2,7 @@ node{
     stage('SCM Checkout'){
       git changelog: false, poll: false, url: 'https://github.com/javahometech/myweb'   
     }
-    def mvnHome = tool name: 'maven-3', type: 'maven'
+    def mvnHome = tool name: 'maven', type: 'maven'
     stage('Test'){
          sh "${mvnHome}/bin/mvn test"
     }
